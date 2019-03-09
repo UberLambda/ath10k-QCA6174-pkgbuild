@@ -1,0 +1,11 @@
+post_install() {
+    echo ">>> ath10k-QCA6174: Reload ath10k modules or reboot to load the new firmware!"
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    echo ">>> ath10k-QCA6174: Reinstall linux-firmware to revert to mainline firmware!"
+}

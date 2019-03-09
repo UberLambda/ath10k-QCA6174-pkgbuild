@@ -1,0 +1,7 @@
+*.xz
+*.gz
+*.lzo
+
+pkg/
+src/
+ath10k-firmware/
