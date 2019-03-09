@@ -2,9 +2,9 @@
 pkgname=ath10k-QCA6174-git
 pkgver=r281.539d3f8
 pkgrel=1
-pkgdesc="Replaces QCA6174 fiwmare in /lib/firmware/ath10k with the version at https://github.com/kvalo/ath10k-firmware."
+pkgdesc="Replaces QCA6174 firmware in /lib/firmware/ath10k with the version at https://github.com/kvalo/ath10k-firmware."
 arch=('any')
-url="https://github.com/kvalo/ath10k-firmware"
+url="https://github.com/UberLambda/ath10k-QCA6174-pkgbuild"
 license=('custom:LICENSE.qca_firmware')
 depends=('linux-firmware')
 makedepends=('git')
