@@ -1,0 +1,12 @@
+[Trigger]
+Operation=Install
+Operation=Upgrade
+Type=Package
+Target=ath10k-QCA6174-git
+
+[Action]
+# Need to move the preinstalled firmware directory,
+# otherwise the new firmware may not be sourced properly
+Description=Backup stock QCA6174 firmware
+When=PreTransaction
+Exec=/usr/bin/mv /usr/lib/firmware/ath10k/QCA6174 /usr/lib/firmware/ath10k/QCA6174.old

@@ -1,5 +1,6 @@
 post_install() {
     echo ">>> ath10k-QCA6174: Reload ath10k modules or reboot to load the new firmware!"
+    echo ">>> ath10k-QCA6174: If the new firmware does not load, delete /usr/lib/firmware/ath10k/QCA6174 and reinstall the package"
 }
 
 post_upgrade() {
