@@ -9,4 +9,4 @@ Target=ath10k-QCA6174-git
 # otherwise the new firmware may not be sourced properly
 Description=Backup stock QCA6174 firmware
 When=PreTransaction
-Exec=/usr/bin/mv /usr/lib/firmware/ath10k/QCA6174 /usr/lib/firmware/ath10k/QCA6174.old
+Exec=/usr/bin/sh -c "rm -rf /usr/lib/firmware/ath10k/QCA6174.old; mv /usr/lib/firmware/ath10k/QCA6174{,.old}"

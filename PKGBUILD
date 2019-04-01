@@ -14,7 +14,7 @@ source=("git+https://github.com/kvalo/ath10k-firmware.git"
         "${pkgname}.hook")
 sha1sums=('SKIP'
           '3bace43bb83795b86755e3380d19294615261950'
-          'f83fd1a6a7d6a140009af87699603c06bc42eb73')
+          'd2ac38e2d7849767ff3ceda0f81de0452a855133')
 install="${pkgname}.install"
 
 pkgver() {
@@ -30,12 +30,12 @@ package() {
 
     install -D -m644 "LICENSE.qca_firmware" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.qca_firmware"
 
-    mkdir -p -m755 "${pkgdir}/usr/lib/firmware/atheros/${_board}"
-    cp -r "${_board}" "${pkgdir}/usr/lib/firmware/atheros/"
+    mkdir -p -m755 "${pkgdir}/usr/lib/firmware/ath10k/${_board}"
+    cp -r "${_board}" "${pkgdir}/usr/lib/firmware/ath10k/"
 
-    cd "${pkgdir}/usr/lib/firmware/atheros/${_board}"
-    ln -s hw3.0/firmware-4.bin{_*,}
-    ln -s hw2.1/firmware-5.bin{_*,}
+    pushd "${pkgdir}/usr/lib/firmware/ath10k/${_board}"
+    mv hw3.0/firmware-4.bin{_*,}
+    mv hw2.1/firmware-5.bin{_*,}
 
     # Install PreTransaction hook
     install -D -m644 "${srcdir}/${pkgname}.hook" "${pkgdir}/etc/pacman.d/hooks/${pkgname}.hook"
