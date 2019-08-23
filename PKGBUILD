@@ -1,7 +1,7 @@
 # Author: Paolo Jovon <paolo.jovon@gmail.com>
 _board="QCA6174"
 pkgname=ath10k-QCA6174-git
-pkgver=r307.7651f5b
+pkgver=r314.3766adc
 pkgrel=1
 pkgdesc="Replaces QCA6174 firmware in /lib/firmware/ath10k with the version at https://github.com/kvalo/ath10k-firmware."
 arch=('any')
